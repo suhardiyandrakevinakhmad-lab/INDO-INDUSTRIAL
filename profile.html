@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile | Indo Industrial</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #0b1d35;
+    --gold: #d5a63a;
+    --muted: #697586;
+    --border: #dfe4ea;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #182536;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background: var(--navy);
+    color: white;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 78px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    background: transparent;
+    border-radius: 0;
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 9px;
+    color: #cbd5e1;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+
+/* HERO */
+
+.hero {
+    background:
+        linear-gradient(
+            rgba(7, 22, 40, 0.65),
+            rgba(7, 22, 40, 0.65)
+        ),
+        url("images/foto pabrik 2.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 260px;
+    padding: 75px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero small {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-top: 12px;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+
+/* PROFILE */
+
+.profile-card {
+    background: white;
+    border: 1px solid var(--border);
+
+    display: grid;
+    grid-template-columns: 280px 1fr;
+
+    gap: 40px;
+
+    padding: 40px;
+}
+
+
+/* FOTO */
+
+.profile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image-box {
+    width: 220px;
+    height: 270px;
+
+    overflow: hidden;
+
+    border: 5px solid #eef1f4;
+
+    background: var(--navy);
+}
+
+.profile-image-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* TEXT */
+
+.profile-info small {
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.profile-info h2 {
+    font-size: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.role {
+    color: #123b68;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.profile-info > p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+/* DETAILS */
+
+.details {
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #edf0f3;
+
+    font-size: 13px;
+}
+
+.detail-row span:first-child {
+    color: var(--muted);
+}
+
+.detail-row span:last-child {
+    font-weight: bold;
+    text-align: right;
+}
+
+
+/* PROJECT */
+
+.project {
+    margin-top: 35px;
+
+    background: var(--navy);
+
+    color: white;
+
+    padding: 35px;
+}
+
+.project small {
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.project h2 {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.project p {
+    color: #d5dce5;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* SKILLS */
+
+.section {
+    margin-top: 55px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-heading small {
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    margin-top: 7px;
+    font-size: 27px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.skill {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 25px;
+    text-align: center;
+}
+
+.skill strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.skill span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* NOTE */
+
+.note {
+    margin-top: 35px;
+
+    padding: 22px;
+
+    background: #fffaf0;
+
+    border: 1px solid #ead9a9;
+
+    color: #675421;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* BUTTON */
+
+.buttons {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: var(--navy);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px;
+
+    margin-top: 30px;
+}
+
+footer h3 {
+    letter-spacing: 2px;
+}
+
+footer p {
+    color: #aeb9c8;
+
+    font-size: 12px;
+
+    margin-top: 7px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .nav-container {
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .details {
+        text-align: left;
+    }
+
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .detail-row span:last-child {
+        text-align: left;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="images/logo_baru-removebg-preview.png"
+                alt="Indo Industrial"
+            >
+
+            <div class="logo-text">
+
+                <strong>
+                    INDO INDUSTRIAL
+                </strong>
+
+                <span>
+                    INDUSTRIAL EQUIPMENT & ENGINEERING
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="index.html">HOME</a>
+
+            <a href="products.html">PRODUCTS</a>
+
+            <a href="about.html">ABOUT US</a>
+
+            <a href="profile.html">PROFILE</a>
+
+            <a href="cart.html">🛒 CART</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <small>
+        INDO INDUSTRIAL
+    </small>
+
+    <h1>
+        Project Profile
+    </h1>
+
+</section>
+
+
+<!-- MAIN -->
+
+<main class="container">
+
+
+    <!-- PROFILE CARD -->
+
+    <section class="profile-card">
+
+
+        <!-- FOTO -->
+
+        <div class="profile-image">
+
+            <div class="profile-image-box">
+
+                <img
+                    src="images/WhatsApp Image 2026-10-04 at 5.13.33 PM.jpeg"
+                    alt="Suhardiyandra Kevin Praditya Akhmad"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- INFORMASI -->
+
+        <div class="profile-info">
+
+            <small>
+                WEBSITE DEVELOPER
+            </small>
+
+            <h2>
+                Suhardiyandra Kevin Praditya Akhmad
+            </h2>
+
+            <div class="role">
+                Student & Web Project Creator
+            </div>
+
+
+            <p>
+                This website was created as part of an
+                Informatics school assignment. The project
+                focuses on creating an industrial equipment
+                website using HTML, CSS, and JavaScript.
+            </p>
+
+
+            <p>
+                The goal of this project is to learn how
+                website structure, styling, navigation,
+                product catalogs, shopping carts, and
+                checkout systems work together.
+            </p>
+
+
+            <div class="details">
+
+
+                <div class="detail-row">
+
+                    <span>Name</span>
+
+                    <span>
+                        Suhardiyandra Kevin Praditya Akhmad
+                    </span>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>School</span>
+
+                    <span>
+                        SMA Negeri 3 Bandung
+                    </span>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>Project</span>
+
+                    <span>
+                        Indo Industrial
+                    </span>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>Project Year</span>
+
+                    <span>
+                        2026
+                    </span>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>Project Type</span>
+
+                    <span>
+                        Informatics Assignment
+                    </span>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>Technologies</span>
+
+                    <span>
+                        HTML / CSS / JavaScript
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT -->
+
+    <section class="project">
+
+        <small>
+            ABOUT THIS PROJECT
+        </small>
+
+        <h2>
+            Indo Industrial Website
+        </h2>
+
+        <p>
+            Indo Industrial is a fictional industrial
+            equipment company created for an educational
+            website project. The website demonstrates
+            product browsing, product categories,
+            shopping cart functionality, customer
+            checkout information, tax calculation,
+            and order confirmation.
+        </p>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <small>
+                PROJECT SKILLS
+            </small>
+
+            <h2>
+                Technologies Used
+            </h2>
+
+        </div>
+
+
+        <div class="skills">
+
+
+            <div class="skill">
+
+                <strong>HTML</strong>
+
+                <span>
+                    Website Structure
+                </span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <strong>CSS</strong>
+
+                <span>
+                    Design & Layout
+                </span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <strong>JavaScript</strong>
+
+                <span>
+                    Website Interaction
+                </span>
+
+            </div>
+
+
+            <div class="skill">
+
+                <strong>LocalStorage</strong>
+
+                <span>
+                    Cart & Order Data
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- NOTE -->
+
+    <div class="note">
+
+        This website is a fictional educational project.
+        Product information, company information, prices,
+        and transactions shown on this website are used
+        for demonstration purposes.
+
+    </div>
+
+
+    <!-- BUTTON -->
+
+    <div class="buttons">
+
+        <a
+            href="index.html"
+            class="btn"
+        >
+            BACK TO HOME
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        INDO INDUSTRIAL
+    </h3>
+
+    <p>
+        Industrial Equipment & Engineering Service
+    </p>
+
+    <p>
+        © 2026 Indo Industrial. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+</html>
